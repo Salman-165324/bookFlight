@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Your Flight</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <h1>Million of Cheap Flights. One simple search</h1>
+    <form>
+      <div class="searchControlDivWrapper">
+        <!-- Input field for specifying the departure origin -->
+        <div class="searchControlDiv">
+          <label for="fromField">From</label>
+          <input type="text" id="fromField" list="departureCityNames" />
+          <datalist id="departureCityNames">
+            <select>
+              <option value="Brisbane"></option>
+              <option value="Bangkok Suvarnabhumi"></option>
+              <option value="Bali" (Denpasar)></option>
+              <option value="Barcelona"></option>
+            </select>
+          </datalist>
+        </div>
+
+        <!-- Input field for specifying the destination -->
+        <div class="searchControlDiv">
+          <label for="toField">To</label>
+          <input type="text" id="toField" list="destinationCityNames" />
+          <datalist id="destinationCityNames">
+            <select>
+              <option value="Brisbane"></option>
+              <option value="Bangkok Suvarnabhumi"></option>
+              <option value="Bali" (Denpasar)></option>
+              <option value="Barcelona"></option>
+            </select>
+          </datalist>
+        </div>
+
+        <!-- Depart Date Selection -->
+        <div class="searchControlDiv"></div>
+
+        <!-- Return Date Selection -->
+        <div class="searchControlDiv"></div>
+
+        <!-- Select travel, cabin class age and more -->
+        <div class="searchControlDiv"></div>
+      </div>
+    </form>
+  </body>
 </html>
