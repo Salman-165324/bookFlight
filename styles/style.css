@@ -95,53 +95,77 @@ textarea:not([rows]) {
 /* CSS Resets Ends */
 
 :root {
-    --clr-light: #eff0e5;
-    --clr-dark: #00332a;
+  --clr-light: #eff0e5;
+  --clr-dark: #00332a;
 
-    --clr-neutral-1: #edeee7;
-    --clr-neutral-2: #e3fcc3;
-    --clr-primary: #e75b34;
-  
-    --foreground: var(--clr-dark);
-    --background: var(--clr-light);
+  --clr-neutral-1: #edeee7;
+  --clr-neutral-2: #e3fcc3;
+  --clr-primary: #e75b34;
 
-    --ff-heading: "Platypi", sans-serif;
-    --ff-body: "Roboto", sans-serif;
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
 
-    font-size: .8em;    
+  --ff-heading: "Platypi", sans-serif;
+  --ff-body: "Roboto", sans-serif;
+
+  font-size: 0.8em;
 }
 
 [data-theme="dark"] {
-    --clr-light: #eff0e5;
-    --clr-dark: #00332a;
-    --clr-neutral-1: #202302;
-    --clr-neutral-2: #00100d;
-    --clr-primary: #ff7750;
-  
-    --foreground: var(--clr-light);
-    --background: var(--clr-dark);
+  --clr-light: #eff0e5;
+  --clr-dark: #00332a;
+  --clr-neutral-1: #202302;
+  --clr-neutral-2: #00100d;
+  --clr-primary: #ff7750;
 
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
 }
 
-@media (min-width: 800px) {     
-    :root {                     
-      font-size: 1em;            
-    }                          
+@media (min-width: 800px) {
+  :root {
+    font-size: 1em;
   }
+}
 
 @media (min-width: 1080px) {
-    :root{
-        font-size: 1.2em;
-    }
+  :root {
+    font-size: 1.2em;
+  }
 }
 
 body {
-  background: linear-gradient(120deg, var(--clr-neutral-1), var(--clr-neutral-2));
+  background: linear-gradient(
+    120deg,
+    var(--clr-neutral-1),
+    var(--clr-neutral-2)
+  );
   color: var(--foreground);
   font-family: var(--ff-body);
+  font-weight: 500;
+
+  /* primary container */
+  margin-top: 8em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
 }
 
+@media (min-width: 40rem) {
+  body {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
 
+@media (min-width: 90rem) {
+  body {
+    padding-left: 4em;
+    padding-right: 4em;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .dark-mode-toggle {
   position: absolute;
@@ -165,9 +189,9 @@ body {
   top: 3em;
 }
 
-.tag-line{
-    font-family: var(--ff-heading);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--clr-primary);
+.tag-line {
+  font-family: var(--ff-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-primary);
 }
