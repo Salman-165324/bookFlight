@@ -206,6 +206,7 @@ body {
     "dates travelersAndMore";
 }
 
+
 .search-field-div {
   border-top-left-radius: 0.7em;
   border-top-right-radius: 0.7em;
@@ -218,6 +219,44 @@ body {
 
   background-color: var(--background);
 }
+
+@media (min-width: 64rem) {
+  
+  .search-field-div-wrapper {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: .25em;
+    
+  }
+
+  .search-field-div {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 12.5em;
+    height: 3.725em;
+  
+    background-color: var(--background);
+  }
+
+  .search-field-div:first-child{
+
+    border-top-left-radius: 0.75em;
+    border-bottom-left-radius: 0.75em;
+  }
+
+  .search-field-div:last-child{
+
+    border-top-right-radius: 0.75em;
+    border-bottom-right-radius: 0.75em;
+  }
+  
+}
+
 
 #departure-div{
 
