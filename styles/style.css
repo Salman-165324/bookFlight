@@ -98,9 +98,10 @@ textarea:not([rows]) {
   --clr-light: #fdfdfa;
   --clr-dark: #010e0b;
 
-  --clr-neutral-1: #eeece7;
-  --clr-neutral-2: #f8fcc3;
+  --clr-neutral-1: #b3bbb0;
+  --clr-neutral-2: #e4f0a3;
   --clr-primary: #e75b34;
+  --clr-primary-dark: #8f341b; 
 
   --foreground: var(--clr-dark);
   --background: var(--clr-light);
@@ -113,8 +114,8 @@ textarea:not([rows]) {
 
 [data-theme="dark"] {
   --clr-light: #d2d3ca;
-  --clr-dark: #010e0b;
-  --clr-neutral-1: #202302;
+  --clr-dark: #010f0c;
+  --clr-neutral-1: #1e2002;
   --clr-neutral-2: #00100d;
   --clr-primary: #ff7750;
 
@@ -196,6 +197,48 @@ body {
   color: var(--clr-primary);
 }
 
+#search-btn {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border: none;
+  height: 3em;
+  border-radius: 0.5em;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media (min-width: 64rem) {
+  #search-btn{
+    height: 3.725em;
+  }
+}
+
+[data-theme="dark"] #search-btn{
+
+  background-color: var(--clr-neutral-1);
+  color: var(--clr-light);
+}
+
+#search-btn:hover, .search-btn:focus {
+  background-color: var(--clr-primary-dark);
+  color: var(--background);
+  outline: none;
+}
+
+#search-btn:active{
+
+  transform: scale(0.95);
+}
+
+[data-theme="dark"] #search-btn:hover, .search-btn:focus {
+  background-color: var(--clr-primary);
+  color: var(--clr-dark);
+  outline: none;
+}
+
 .search-field-div-wrapper {
   margin-top: 1.5em;
   display: grid;
@@ -225,7 +268,8 @@ body {
   .search-field-div-wrapper {
     display: flex; 
     flex-wrap: wrap;
-    gap: .25em;
+    column-gap: .25em;
+    row-gap: .50em;
     
   }
 
@@ -237,7 +281,7 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 12.5em;
+    width: 11em;
     height: 3.725em;
   
     background-color: var(--background);
