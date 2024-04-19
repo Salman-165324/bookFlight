@@ -95,11 +95,11 @@ textarea:not([rows]) {
 /* CSS Resets Ends */
 
 :root {
-  --clr-light: #eff0e5;
-  --clr-dark: #00332a;
+  --clr-light: #fdfdfa;
+  --clr-dark: #010e0b;
 
-  --clr-neutral-1: #edeee7;
-  --clr-neutral-2: #e3fcc3;
+  --clr-neutral-1: #eeece7;
+  --clr-neutral-2: #f8fcc3;
   --clr-primary: #e75b34;
 
   --foreground: var(--clr-dark);
@@ -112,8 +112,8 @@ textarea:not([rows]) {
 }
 
 [data-theme="dark"] {
-  --clr-light: #eff0e5;
-  --clr-dark: #00332a;
+  --clr-light: #d2d3ca;
+  --clr-dark: #010e0b;
   --clr-neutral-1: #202302;
   --clr-neutral-2: #00100d;
   --clr-primary: #ff7750;
@@ -194,4 +194,47 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: var(--clr-primary);
+}
+
+.search-field-div-wrapper {
+  margin-top: 1.5em;
+  display: grid;
+  gap: 1.25em;
+  grid-template:
+    "departure departure"
+    "destination destination"
+    "dates travelersAndMore";
+}
+
+.search-field-div {
+  border-top-left-radius: 0.7em;
+  border-top-right-radius: 0.7em;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 3em;
+
+  background-color: var(--background);
+}
+
+#departure-div{
+
+  grid-area: departure;
+  
+}
+
+#destination-div{
+  grid-area: destination;
+ 
+}
+
+#dates-div{
+  grid-area: dates;
+}
+
+#travelers-and-more-div{
+
+  grid-area: travelersAndMore;
 }

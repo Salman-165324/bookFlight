@@ -19,7 +19,7 @@
   <body>
     <p class="tag-line">Million of Cheap Flights. One simple search</p>
 
-    <button id="themeToggle"class="dark-mode-toggle">
+    <button id="themeToggle" class="dark-mode-toggle">
       <svg
         width="100%"
         xmlns="http://www.w3.org/2000/svg"
@@ -86,9 +86,9 @@
     </div>
 
     <form>
-      <div class="searchControlDivWrapper">
+      <div class="search-field-div-wrapper">
         <!-- Input field for specifying the departure origin -->
-        <div class="searchControlDiv">
+        <div class="search-field-div" id="departure-div">
           <label for="fromField">From</label>
           <input type="text" id="fromField" list="departureCityNames" />
           <datalist id="departureCityNames">
@@ -102,7 +102,7 @@
         </div>
 
         <!-- Input field for specifying the destination -->
-        <div class="searchControlDiv">
+        <div class="search-field-div" id="destination-div">
           <label for="toField">To</label>
           <input type="text" id="toField" list="destinationCityNames" />
           <datalist id="destinationCityNames">
@@ -116,13 +116,16 @@
         </div>
 
         <!-- Depart Date Selection -->
-        <div class="searchControlDiv"></div>
+        <div class="search-field-div" id="destination-div"></div>
 
-        <!-- Return Date Selection -->
-        <div class="searchControlDiv"></div>
+        <!--depart and return Date Selection -->
+        <div class="search-field-div" id="dates-div"></div>
 
-        <!-- Select travel, cabin class age and more -->
-        <div class="searchControlDiv"></div>
+        <!-- travelers, cabin and other information selection -->
+        <div class="search-field-div" id="travelers-and-more-div"></div>
+
+        <!-- Select travel, cabin class age and more
+        <div class="search-field-div"></div> -->
       </div>
     </form>
 
