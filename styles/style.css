@@ -126,13 +126,13 @@ textarea:not([rows]) {
   --background: var(--clr-dark);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50em) {
   :root {
     font-size: 1em;
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 90em) {
   :root {
     font-size: 1.2em;
   }
@@ -154,18 +154,18 @@ body {
   padding-right: 0.6em;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 40em) {
   body {
     padding-left: 2em;
     padding-right: 2em;
   }
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 90em) {
   body {
     padding-left: 4em;
     padding-right: 4em;
-    max-width: 90rem;
+    max-width: 90em;
     margin-left: auto;
     margin-right: auto;
   }
@@ -179,7 +179,7 @@ form{
   flex-direction: column;
   row-gap: 1em;
 }
-@media (min-width: 64rem) {
+@media (min-width: 64em) {
   form {
      flex-direction: row;
      align-items: center;
@@ -203,7 +203,7 @@ form{
   transition: background-color 0.3s, color 0.3s;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 64em) {
   #search-btn {
     height: 3.725em;
     width: fit-content;
@@ -249,7 +249,7 @@ form{
     "dates travelersAndMore";
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 64em) {
   .search-field-div-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -303,7 +303,7 @@ form{
   outline: none;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 64em) {
   .search-field-div {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
