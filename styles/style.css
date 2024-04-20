@@ -267,7 +267,6 @@ form{
   gap: 0.5em;
 
   justify-content: left;
-  align-items: center;
   height: 3em;
   padding-left: 1em;
   padding-right: 0.2em;
@@ -310,12 +309,23 @@ form{
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     display: flex;
-    justify-content: left;
-    align-items: center;
+    gap: .4em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
     width: 11em;
-    height: 3.725em;
+    height: 4.5em;
     background-color: var(--background);
   }
+
+  .search-field-div input {
+    border: none;
+    background-color: inherit;
+    width: 100%;
+    height: fit-content;
+    display: block;
+  }
+  
 
   .search-field-div:first-child {
     border-top-left-radius: 0.75em;
