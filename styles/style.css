@@ -193,7 +193,7 @@ form{
   font-size: 1rem;
   padding: 0.5em 1em;
   border: none;
-  height: 3em;
+  height: 4.5em;
   width: 100%;
   border-radius: 0.5em;
   background-color: var(--clr-primary);
@@ -205,7 +205,7 @@ form{
 
 @media (min-width: 78em) {
   #search-btn {
-    height: 3.725em;
+    
     width: fit-content;
 
   }
