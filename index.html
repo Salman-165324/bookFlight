@@ -85,12 +85,17 @@
       </svg>
     </div>
 
-    <form >
+    <form>
       <div class="search-field-div-wrapper">
         <!-- Input field for specifying the departure origin -->
         <div class="search-field-div" id="departure-div">
           <label for="fromField">From</label>
-          <input type="text" id="fromField" list="departureCityNames" placeholder="Country, city or airport" />
+          <input
+            type="text"
+            id="fromField"
+            list="departureCityNames"
+            placeholder="Country, city or airport"
+          />
           <datalist id="departureCityNames">
             <select>
               <option value="Brisbane"></option>
@@ -104,7 +109,12 @@
         <!-- Input field for specifying the destination -->
         <div class="search-field-div" id="destination-div">
           <label for="toField">To</label>
-          <input type="text" id="toField" list="destinationCityNames" placeholder="Country, city or airport" />
+          <input
+            type="text"
+            id="toField"
+            list="destinationCityNames"
+            placeholder="Country, city or airport"
+          />
           <datalist id="destinationCityNames">
             <select>
               <option value="Brisbane"></option>
@@ -115,21 +125,28 @@
           </datalist>
         </div>
 
-     
+        <!--depart and return Date Selection -->
+        <div class="search-field-div" id="departure-date-div">
+          <label for="departure-date">Depart</label>
+          <input type="text" id="departure-date" placeholder="Add date" />
+
+          
+        </div>
 
         <!--depart and return Date Selection -->
-        <div class="search-field-div" id="dates-div"></div>
+        <div class="search-field-div" id="return-date-div">
+          <label for="return-date">Return</label>
+          <input type="text" id="return-date" placeholder="Add date"/>
+        </div>
 
         <!-- travelers, cabin and other information selection -->
         <div class="search-field-div" id="travelers-and-more-div"></div>
-   
-
-        
       </div>
 
       <button id="search-btn">Search</button>
     </form>
 
+    <script type="module" src="/js/datePicker.js"></script>
     <script src="/js/theme-toggle.js"></script>
   </body>
 </html>
