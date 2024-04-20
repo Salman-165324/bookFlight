@@ -179,7 +179,7 @@ form{
   flex-direction: column;
   row-gap: 1em;
 }
-@media (min-width: 64em) {
+@media (min-width: 78em) {
   form {
      flex-direction: row;
      align-items: center;
@@ -203,7 +203,7 @@ form{
   transition: background-color 0.3s, color 0.3s;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 78em) {
   #search-btn {
     height: 3.725em;
     width: fit-content;
@@ -244,12 +244,13 @@ form{
   display: grid;
   gap: 0.2em;
   grid-template:
-    "departure   departure"
-    "destination destination"
-    "dates travelersAndMore";
+    "departure   departure   departure   departure    departure   departure   departure   departure"
+    "destination destination destination destination destination  destination destination destination"
+    "departureDate departureDate  returnDate returnDate travelersAndMore travelersAndMore travelersAndMore travelersAndMore"
+   
 }
 
-@media (min-width: 64em) {
+@media (min-width: 78em) {
   .search-field-div-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -264,11 +265,11 @@ form{
 /* search field div related styles */
 .search-field-div {
   display: flex;
-  gap: 0.5em;
-
-  justify-content: left;
-  align-items: center;
-  height: 3em;
+  gap: .4em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 4.5em;
   padding-left: 1em;
   padding-right: 0.2em;
   background-color: var(--background);
@@ -295,7 +296,7 @@ form{
   border: none;
   background-color: inherit;
   width: 100%;
-  height: 85%;
+  height: fit-content;
   display: block;
 }
 
@@ -303,7 +304,7 @@ form{
   outline: none;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 78em) {
   .search-field-div {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -349,15 +350,22 @@ form{
   grid-area: destination;
 }
 
-#dates-div {
-  grid-area: dates;
+#departure-date-div {
+  grid-area: departureDate;
+  overflow:hidden;
+}
+
+#return-date-div{
+  grid-area: returnDate;
+  overflow:hidden;
 }
 
 #travelers-and-more-div {
   grid-area: travelersAndMore;
+  min-width: 9em;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 78em) {
 
   #departure-div, #destination-div  {
     width: 15em;
