@@ -94,6 +94,9 @@ textarea:not([rows]) {
 
 /* CSS Resets Ends */
 
+
+/* basic styles */
+
 :root {
   --clr-light: #fdfdfa;
   --clr-dark: #010e0b;
@@ -168,6 +171,184 @@ body {
   }
 }
 
+/* basic styles ends */
+
+form{
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+@media (min-width: 64rem) {
+  form {
+     flex-direction: row;
+     align-items: center;
+     column-gap: 0.6em;
+  }
+}
+
+/* search btn related styles */
+
+#search-btn {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border: none;
+  height: 3em;
+  width: 100%;
+  border-radius: 0.5em;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media (min-width: 64rem) {
+  #search-btn {
+    height: 3.725em;
+    width: fit-content;
+
+  }
+}
+
+[data-theme="dark"] #search-btn {
+  background-color: var(--clr-neutral-1);
+  color: var(--clr-light);
+}
+
+#search-btn:hover,
+.search-btn:focus {
+  background-color: var(--clr-primary-dark);
+  color: var(--background);
+  outline: none;
+}
+
+#search-btn:active {
+  transform: scale(0.95);
+}
+
+[data-theme="dark"] #search-btn:hover,
+.search-btn:focus {
+  background-color: var(--clr-primary);
+  color: var(--clr-dark);
+  outline: none;
+}
+
+/* search btn related styles ends*/
+
+
+/* search field div wrapper related styles */
+
+.search-field-div-wrapper {
+ 
+  display: grid;
+  gap: 0.2em;
+  grid-template:
+    "departure   departure"
+    "destination destination"
+    "dates travelersAndMore";
+}
+
+@media (min-width: 64rem) {
+  .search-field-div-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.25em;
+    row-gap: 0.5em;
+  }
+}
+
+/* search field div wrapper related styles ends*/
+
+
+/* search field div related styles */
+.search-field-div {
+  display: flex;
+  gap: 0.5em;
+
+  justify-content: left;
+  align-items: center;
+  height: 3em;
+  padding-left: 1em;
+  padding-right: 0.2em;
+  background-color: var(--background);
+}
+
+.search-field-div:first-child {
+  border-top-left-radius: 0.75em;
+  border-top-right-radius: 0.75em;
+}
+
+.search-field-div:last-of-type {
+  border-bottom-right-radius: 0.75em;
+}
+
+.search-field-div:focus-within {
+  outline: 3px solid var(--clr-primary); /* Change to a very noticeable color */
+}
+
+.search-field-div label {
+  display: block;
+}
+
+.search-field-div input {
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  height: 85%;
+  display: block;
+}
+
+.search-field-div input:focus {
+  outline: none;
+}
+
+@media (min-width: 64rem) {
+  .search-field-div {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 11em;
+    height: 3.725em;
+    background-color: var(--background);
+  }
+
+  .search-field-div:first-child {
+    border-top-left-radius: 0.75em;
+    border-bottom-left-radius: 0.75em;
+
+    border-top-right-radius: 0em;
+  }
+
+  .search-field-div:last-of-type {
+    border-bottom-right-radius: 0.75em;
+    border-top-right-radius: 0.75em;
+  }
+}
+
+#departure-div {
+  grid-area: departure;
+}
+
+#destination-div {
+  grid-area: destination;
+}
+
+#dates-div {
+  grid-area: dates;
+}
+
+#travelers-and-more-div {
+  grid-area: travelersAndMore;
+}
+
+/* search field div related styles ends */
+
+/* Other styles */
 .dark-mode-toggle {
   position: absolute;
   z-index: 100;
@@ -197,141 +378,4 @@ body {
   color: var(--clr-primary);
 }
 
-#search-btn {
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  border: none;
-  height: 3em;
-  border-radius: 0.5em;
-  background-color: var(--clr-primary);
-  color: var(--clr-light);
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-@media (min-width: 64rem) {
-  #search-btn {
-    height: 3.725em;
-  }
-}
-
-[data-theme="dark"] #search-btn {
-  background-color: var(--clr-neutral-1);
-  color: var(--clr-light);
-}
-
-#search-btn:hover,
-.search-btn:focus {
-  background-color: var(--clr-primary-dark);
-  color: var(--background);
-  outline: none;
-}
-
-#search-btn:active {
-  transform: scale(0.95);
-}
-
-[data-theme="dark"] #search-btn:hover,
-.search-btn:focus {
-  background-color: var(--clr-primary);
-  color: var(--clr-dark);
-  outline: none;
-}
-
-.search-field-div-wrapper {
-  margin-top: 1.5em;
-  display: grid;
-  gap: 1.25em;
-  grid-template:
-    "departure departure"
-    "destination destination"
-    "dates travelersAndMore";
-}
-
-.search-field-div {
-  border-top-left-radius: 0.7em;
-  border-top-right-radius: 0.7em;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  display: flex;
-  gap: 0.5em;
-
-  justify-content: left;
-  align-items: center;
-  height: 3em;
-  padding-left: 1em;
-  padding-right: 0.2em;
-  background-color: var(--background);
-}
-
-.search-field-div:focus-within {
-  outline: 3px solid var(--clr-primary); /* Change to a very noticeable color */
-}
-
-@media (min-width: 64rem) {
-  .search-field-div-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.25em;
-    row-gap: 0.5em;
-  }
-
-  .search-field-div {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 11em;
-    height: 3.725em;
-    background-color: var(--background);
-  }
-
-  .search-field-div:first-child {
-    border-top-left-radius: 0.75em;
-    border-bottom-left-radius: 0.75em;
-  }
-
-  .search-field-div:last-child {
-    border-top-right-radius: 0.75em;
-    border-bottom-right-radius: 0.75em;
-  }
-}
-
-#departure-div {
-  grid-area: departure;
-}
-
-#destination-div {
-  grid-area: destination;
-}
-
-#dates-div {
-  grid-area: dates;
-}
-
-#travelers-and-more-div {
-  grid-area: travelersAndMore;
-}
-
-.search-field-div label{
-
-  display: block;
-}
-
-.search-field-div input{
-
-  border: none;
-  background-color: inherit;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.search-field-div input:focus{
-
-  outline: none;
-}
+/* Other styles ends*/
