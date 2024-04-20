@@ -132,11 +132,11 @@ textarea:not([rows]) {
   }
 }
 
-@media (min-width: 90em) {
+/* @media (min-width: 90em) {
   :root {
     font-size: 1.2em;
   }
-}
+} */
 
 body {
   background: linear-gradient(
@@ -284,7 +284,7 @@ form{
 }
 
 .search-field-div:focus-within {
-  outline: 3px solid var(--clr-primary); /* Change to a very noticeable color */
+  outline: 3px solid var(--clr-primary); 
 }
 
 .search-field-div label {
@@ -344,6 +344,14 @@ form{
 
 #travelers-and-more-div {
   grid-area: travelersAndMore;
+}
+
+@media (min-width: 64em) {
+
+  #departure-div, #destination-div  {
+    width: 15em;
+  }
+
 }
 
 /* search field div related styles ends */
