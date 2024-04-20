@@ -267,6 +267,7 @@ form{
   gap: 0.5em;
 
   justify-content: left;
+  align-items: center;
   height: 3em;
   padding-left: 1em;
   padding-right: 0.2em;
@@ -312,7 +313,7 @@ form{
     gap: .4em;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: flex-start;
     width: 11em;
     height: 4.5em;
     background-color: var(--background);
