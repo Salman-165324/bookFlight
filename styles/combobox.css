@@ -18,7 +18,7 @@
 
 .listbox,
 .grid {
-  width: 18em;
+  min-width: 18em;
   background: var(--background);
   border: 1px solid var(--clr-neutral-1);
   list-style: none;
@@ -38,6 +38,8 @@
   padding: 2px;
   cursor: default;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .listbox .result:hover,

@@ -381,7 +381,7 @@ form {
   cursor: pointer;
   position: absolute;
   bottom: -2.2em;
-  right: -1em;
+  right: 0.5em;
   transform: translate(-50%, -50%);
   z-index: 1;
 
@@ -408,6 +408,12 @@ form {
   #swapButton {
     top: 50%;
     right: -15%;
+  }
+}
+
+@media (max-width: 50em) {
+  #swapButton i.fa-rotate {
+    transform: translate(0%, 13%);
   }
 }
 
