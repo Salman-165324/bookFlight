@@ -588,6 +588,8 @@ fieldset {
 
 /* Other styles ends*/
 
+
+/* calender styles */
 :host {
   --color-bg-default: var(--background);
   --color-fg-primary: var(--clr-primary);
