@@ -338,7 +338,7 @@ window.addEventListener('load', function() {
       .catch(error => console.error('Error loading city data:', error));
 });
 
-function searchVeggies(searchString) {
+function searchData(searchString) {
   var results = [];
 
   for (var i = 0; i < citiesAndCountry.length; i++) {
@@ -359,7 +359,7 @@ window.addEventListener('load', function () {
   new aria.GridCombobox(
     document.getElementById('destination-input'),
     document.getElementById('destination-grid'),
-    searchVeggies
+    searchData
   );
 });
 'use strict';
