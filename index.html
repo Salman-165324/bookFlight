@@ -13,6 +13,10 @@
       rel="stylesheet"
     />
 
+      <!-- font awesome -->
+      <script src="https://kit.fontawesome.com/0334a2fe42.js" crossorigin="anonymous"></script>
+
+
     <title>Book Your Flight</title>
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
@@ -89,10 +93,10 @@
       <div class="search-field-div-wrapper">
         <!-- Input field for specifying the departure origin -->
         <div class="search-field-div" id="departure-div">
-          <label for="fromField">From</label>
+          <label for="departure-field">From</label>
           <input
             type="text"
-            id="fromField"
+            id="departure-field"
             list="departureCityNames"
             placeholder="Country, city or airport"
           />
@@ -104,14 +108,19 @@
               <option value="Barcelona"></option>
             </select>
           </datalist>
+
+          <!-- Swap Button -->
+          <button id="swapButton" onclick="swapValues()">
+            <i class="fa-solid fa-rotate"></i>
+          </button>
         </div>
 
         <!-- Input field for specifying the destination -->
         <div class="search-field-div" id="destination-div">
-          <label for="toField">To</label>
+          <label for="destination-field">To</label>
           <input
             type="text"
-            id="toField"
+            id="destination-field"
             list="destinationCityNames"
             placeholder="Country, city or airport"
           />
@@ -158,14 +167,16 @@
                 <select id="cabin-class" name="cabinClass">
                   <option value="Economy">Economy</option>
                   <option value="Business">Business</option>
-                  <option value="FirstClass">First Class</option>
+                  <option value="First Class">First Class</option>
                 </select>
               </div>
 
               <div>
                 <label for="adult-traveler-count">Adults (Aged 16+)</label>
                 <div class="number-input">
-                  <button onclick="decrement('adult-traveler-count', 1)">-</button>
+                  <button onclick="decrement('adult-traveler-count', 1)">
+                    -
+                  </button>
                   <input
                     type="number"
                     id="adult-traveler-count"
@@ -175,14 +186,20 @@
                     max="8"
                     required
                   />
-                  <button onclick="increment('adult-traveler-count', 8)">+</button>
+                  <button onclick="increment('adult-traveler-count', 8)">
+                    +
+                  </button>
                 </div>
               </div>
-              
+
               <div>
-                <label for="child-traveler-count">Children (Aged 0 to 15)</label>
+                <label for="child-traveler-count"
+                  >Children (Aged 0 to 15)</label
+                >
                 <div class="number-input">
-                  <button onclick="decrement('child-traveler-count', 0)">-</button>
+                  <button onclick="decrement('child-traveler-count', 0)">
+                    -
+                  </button>
                   <input
                     type="number"
                     id="child-traveler-count"
@@ -191,10 +208,12 @@
                     min="0"
                     max="9"
                   />
-                  <button onclick="increment('child-traveler-count', 9)">+</button>
+                  <button onclick="increment('child-traveler-count', 9)">
+                    +
+                  </button>
                 </div>
               </div>
-              
+
               <div>
                 <p>
                   Your age at time of travel must be valid for the age category
@@ -220,5 +239,6 @@
     <script src="/js/theme-toggle.js"></script>
     <script src="/js/travelersDropdown.js"></script>
     <script src="/js/travelerCounter.js"></script>
+    <script src="/js/swapPlaces.js"></script>
   </body>
 </html>

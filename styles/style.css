@@ -342,10 +342,13 @@ form {
 
 #departure-div {
   grid-area: departure;
+  position: relative;
+
 }
 
 #destination-div {
   grid-area: destination;
+  padding-left: 1.5em;
 }
 
 #departure-date-div {
@@ -366,8 +369,59 @@ form {
   #travelers-and-more-div {
     width: 15em;
   }
+
+  #destination-div {
+    padding-left: 1.5em;
+  }
 }
 
+#swapButton {
+  /* Styles to make the button look like the provided image */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute; 
+  bottom: -2.2em; 
+  right: -1em; 
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+
+  border: .2em solid var(--clr-primary); 
+  border-radius: 50%;
+  width: 2.2em; /* Set the width of the button */
+  height: 2.2em; /* Set the height of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  display: flex; /* Use flexbox for centering the icon */
+  justify-content: center; /* Center the icon horizontally */
+  align-items: center; /* Center the icon vertically */
+  transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+#swapButton:hover {
+  background-color: var(--clr-primary); /* Color of the button on hover */
+}
+
+#swapButton:focus {
+  outline: none; /* Removes the outline to avoid default browser styles */
+}
+
+@media (min-width: 78em) {
+  #swapButton{
+    top: 50%; 
+    right: -15%; 
+  }
+}
+
+#swapButton i.fa-rotate {
+  /* color: #000000; Set the color of the icon */
+  font-size: 1em; /* Set the size of the icon */
+  transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+#swapButton:hover i.fa-rotate {
+  transform: rotate(180deg); /* Rotates the icon 180 degrees on hover */
+}
 /* search field div related styles ends */
 
 /* travelers and other information related classes */
