@@ -85,7 +85,7 @@
       </svg>
     </div>
 
-    <form>
+    <form onsubmit= "event.preventDefault(); return false;">
       <div class="search-field-div-wrapper">
         <!-- Input field for specifying the departure origin -->
         <div class="search-field-div" id="departure-div">
@@ -129,18 +129,71 @@
         <div class="search-field-div" id="departure-date-div">
           <label for="departure-date">Depart</label>
           <input type="text" id="departure-date" placeholder="Add date" />
-
-          
         </div>
 
         <!--depart and return Date Selection -->
         <div class="search-field-div" id="return-date-div">
           <label for="return-date">Return</label>
-          <input type="text" id="return-date" placeholder="Add date"/>
+          <input type="text" id="return-date" placeholder="Add date" />
         </div>
 
         <!-- travelers, cabin and other information selection -->
-        <div class="search-field-div" id="travelers-and-more-div"></div>
+        <div class="search-field-div" id="travelers-and-more-div">
+          <label for="travelers-and-more">Travelers and cabin class</label>
+          <input
+            type="text"
+            id="travelers-and-more"
+            readonly
+          />
+          <div
+            id="travelers-dropdown"
+            aria-labelledby="total number of travelers, cabin class selectoin menu"
+          >
+            <fieldset>
+              <legend class="visually-hidden">Travelers Information</legend>
+
+              <label for="cabin-class">Cabin Class</label>
+              <select id="cabin-class" name="cabinClass">
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="FirstClass">First Class</option>
+              </select>
+
+              <label for="adult-traveler-count">Adults(Aged 16+)</label>
+              <input
+                type="number"
+                id="adult-traveler-count"
+                name="adultTravelerCount"
+                value="1"
+                min="1"
+                max="8"
+                required
+              />
+
+              <label for="child-traveler-count">Children (Aged 0 to 15)</label>
+              <input
+                type="number"
+                id="child-traveler-count"
+                name="children"
+                value="0"
+                min="0"
+                max="9"
+              />
+
+              <p>
+                Your age at time of travel must be valid for the age category
+                booked. Airlines have restrictions on under 18s traveling
+                alone.
+              </p>
+              <p>
+                Age limits and policies for traveling with children may vary so
+                please check with the airline before booking.
+              </p>
+
+              <button type="button" onclick="applySelection()">Apply</button>
+            </fieldset>
+          </div>
+        </div>
       </div>
 
       <button id="search-btn">Search</button>
@@ -148,5 +201,6 @@
 
     <script type="module" src="/js/datePicker.js"></script>
     <script src="/js/theme-toggle.js"></script>
+    <script src="/js/travelersDropdown.js"></script>
   </body>
 </html>

@@ -94,7 +94,6 @@ textarea:not([rows]) {
 
 /* CSS Resets Ends */
 
-
 /* basic styles */
 
 :root {
@@ -173,7 +172,7 @@ body {
 
 /* basic styles ends */
 
-form{
+form {
   margin-top: 1.5em;
   display: flex;
   flex-direction: column;
@@ -181,9 +180,9 @@ form{
 }
 @media (min-width: 78em) {
   form {
-     flex-direction: row;
-     align-items: center;
-     column-gap: 0.6em;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.6em;
   }
 }
 
@@ -205,9 +204,7 @@ form{
 
 @media (min-width: 78em) {
   #search-btn {
-    
     width: fit-content;
-
   }
 }
 
@@ -236,18 +233,15 @@ form{
 
 /* search btn related styles ends*/
 
-
 /* search field div wrapper related styles */
 
 .search-field-div-wrapper {
- 
   display: grid;
   gap: 0.2em;
   grid-template:
     "departure   departure   departure   departure    departure   departure   departure   departure"
     "destination destination destination destination destination  destination destination destination"
-    "departureDate departureDate  returnDate returnDate travelersAndMore travelersAndMore travelersAndMore travelersAndMore"
-   
+    "departureDate departureDate  returnDate returnDate travelersAndMore travelersAndMore travelersAndMore travelersAndMore";
 }
 
 @media (min-width: 78em) {
@@ -261,15 +255,14 @@ form{
 
 /* search field div wrapper related styles ends*/
 
-
 /* search field div related styles */
 .search-field-div {
   display: flex;
-  gap: .4em;
+  gap: 0.4em;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 1em;
   align-items: flex-start;
-  height: 4.5em;
+  height: 6em;
   padding-left: 1em;
   padding-right: 0.2em;
   background-color: var(--background);
@@ -285,7 +278,7 @@ form{
 }
 
 .search-field-div:focus-within {
-  outline: 3px solid var(--clr-primary); 
+  outline: 3px solid var(--clr-primary);
 }
 
 .search-field-div label {
@@ -306,18 +299,20 @@ form{
 
 @media (min-width: 78em) {
   .search-field-div {
+    padding-top: 0em;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     display: flex;
-    gap: .4em;
+    gap: 0.4em;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 11em;
+    width: 8em;
     height: 4.5em;
     background-color: var(--background);
+    position: relative;
   }
 
   .search-field-div input {
@@ -327,7 +322,6 @@ form{
     height: fit-content;
     display: block;
   }
-  
 
   .search-field-div:first-child {
     border-top-left-radius: 0.75em;
@@ -352,35 +346,67 @@ form{
 
 #departure-date-div {
   grid-area: departureDate;
-  overflow:hidden;
 }
 
-#return-date-div{
+#return-date-div {
   grid-area: returnDate;
-  overflow:hidden;
 }
 
 #travelers-and-more-div {
   grid-area: travelersAndMore;
-  min-width: 9em;
 }
 
 @media (min-width: 78em) {
-
-  #departure-div, #destination-div  {
+  #departure-div,
+  #destination-div,
+  #travelers-and-more-div {
     width: 15em;
   }
-
 }
 
 /* search field div related styles ends */
+
+/* travelers and other information related classes */
+
+#travelers-dropdown {
+  display: none;
+  background-color: var(--background);
+  width: 85vw;
+  max-width: 24.5em;
+  padding: 0.8em 1em;
+  position: absolute;
+  z-index: 10;
+  top: 4.8em;
+}
+
+#travelers-and-more:focus + #travelers-dropdown,
+#travelers-and-more:active + #travelers-dropdown,
+#travelers-dropdown:focus,
+#travelers-dropdown:active, #travelers-dropdown:focus-within {
+  display: block;
+}
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+fieldset{
+
+  border: none;
+}
 
 /* Other styles */
 .dark-mode-toggle {
   position: absolute;
   z-index: 100;
   top: 1em;
-  right: 1em;
+  right: 3em;
   color: var(--foreground);
   border: 2px solid currentColor;
   padding: 4px;
@@ -393,7 +419,7 @@ form{
 
 .click-here {
   width: 100px;
-  right: 1.5em;
+  right: 3.5em;
   position: absolute;
   top: 3em;
 }
