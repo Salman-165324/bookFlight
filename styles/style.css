@@ -588,7 +588,6 @@ fieldset {
 
 /* Other styles ends*/
 
-
 /* calender styles */
 :host {
   --color-bg-default: var(--background);
@@ -598,4 +597,10 @@ fieldset {
   --color-bg-inrange: var(--clr-neutral-1);
   --day-width: 35px;
   --day-height: 30px;
+}
+
+@media (min-width: 78rem) {
+  .container {
+    margin-top: 1.9em; /* Adds 10px to the top margin, effectively lowering the position */
+  }
 }
