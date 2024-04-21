@@ -376,7 +376,7 @@ form {
 
 #swapButton {
   /* Styles to make the button look like the provided image */
-  background-color: transparent;
+  background-color: var(--background);
   border: none;
   cursor: pointer;
   position: absolute;
