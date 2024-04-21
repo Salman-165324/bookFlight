@@ -595,8 +595,8 @@ fieldset {
   --color-fg-default: var(--foreground);
   --color-fg-accent: var(--clr-primary-dark);
   --color-bg-inrange: var(--clr-neutral-1);
-  --day-width: 35px;
-  --day-height: 30px;
+  --day-width: 40px;
+  --day-height: 32px;
 }
 
 @media (min-width: 78rem) {

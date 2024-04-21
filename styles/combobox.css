@@ -1,0 +1,91 @@
+@import url("style.css");
+.hidden {
+  display: none;
+}
+
+.combobox-wrapper {
+  display: inline-block;
+  position: relative;
+  /* font-size: 16px; */
+}
+
+/* .combobox-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+   */
+
+.listbox,
+.grid {
+  width: 18em;
+  background: var(--background);
+  border: 1px solid var(--clr-neutral-1);
+  list-style: none;
+  margin: 0;
+  padding: .4em .4em .4em .4em;
+  position: absolute;
+  top: 2.5em;
+  z-index: 1;
+}
+
+.listbox .result {
+  cursor: default;
+  margin: 0;
+}
+
+.grid .result-row {
+  padding: 2px;
+  cursor: default;
+  margin: 0;
+}
+
+.listbox .result:hover,
+.grid .result-row:hover {
+  background: var(--clr-primary);
+}
+
+.listbox .focused,
+.grid .focused {
+  background: var(--clr-primary-1);
+}
+
+.grid .focused-cell {
+  outline-style: dotted;
+  outline-color: var(--clr-primary);
+}
+
+/* .combobox-wrapper input {
+    font-size: inherit;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    line-height: 1.5em;
+    padding-right: 30px;
+    width: 200px;
+  }
+   */
+.combobox-dropdown {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 0 2px;
+  height: 1.5em;
+  border-radius: 0 2px 2px 0;
+  border: 1px solid #aaa;
+}
+
+.grid .result-cell {
+  display: inline-block;
+  cursor: default;
+  margin: 0;
+  padding: 0 5px;
+}
+
+.grid .result-cell:last-child {
+    float: right;
+    font-size: .8em;
+    font-weight: 200;
+    color: var(--foreground);
+    line-height: 24px;
+  }
+  

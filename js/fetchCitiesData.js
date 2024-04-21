@@ -20,4 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error fetching the cities JSON:', error);
       });
   });
-  
+  c
