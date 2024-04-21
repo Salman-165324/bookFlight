@@ -163,14 +163,19 @@
             <fieldset>
               <legend class="visually-hidden">Travelers Information</legend>
 
+              <!-- cabin class selection -->
               <div>
                 <label for="cabin-class">Cabin Class</label>
-                <select id="cabin-class" name="cabinClass">
-                  <option value="Economy">Economy</option>
-                  <option value="Business">Business</option>
-                  <option value="First Class">First Class</option>
-                </select>
+                <div class="custom-select" onclick="toggleDropdown()">
+                  <span id="selected-value">Economy</span>
+                  <div id="custom-options" class="options-container">
+                    <div class="option" data-value="Economy">Economy</div>
+                    <div class="option" data-value="Business">Business</div>
+                    <div class="option" data-value="First Class">First Class</div>
+                  </div>
+                </div>
               </div>
+            
 
               <div>
                 <label for="adult-traveler-count">Adults (Aged 16+)</label>
@@ -238,6 +243,7 @@
 
     <script type="module" src="/js/datePicker.js"></script>
     <script src="/js/theme-toggle.js"></script>
+    <script src="/js/customCabinClassSelection.js"></script>
     <script src="/js/travelersDropdown.js"></script>
     <script src="/js/travelerCounter.js"></script>
     <script src="/js/swapPlaces.js"></script>

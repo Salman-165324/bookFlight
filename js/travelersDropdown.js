@@ -16,7 +16,7 @@ const showDropdown = () => {
   const updateDisplayValue = () => {
     const adults = document.getElementById('adult-traveler-count').value || 1;
     const children = document.getElementById('child-traveler-count').value || 0;
-    const cabinClass = document.getElementById('cabin-class').value || 0; 
+    const cabinClass = document.getElementById('selected-value').textContent || "Economy"; 
     const displayValue = `${adults} Adult${adults > 1 ? 's' : ''}, ${children} Child${children > 1 ? 'ren' : ''}, ${cabinClass}`;
     document.getElementById('travelers-and-more').value = displayValue;
   };
@@ -53,7 +53,6 @@ const showDropdown = () => {
     document.getElementById('adults')?.addEventListener('change', updateDisplayValue);
     document.getElementById('children')?.addEventListener('change', updateDisplayValue);
   
-    // Call the update display function to set the initial value
-    updateDisplayValue();
+    
   });
   
