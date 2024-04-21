@@ -419,6 +419,17 @@ fieldset {
   border: none;
 }
 
+#travelers-dropdown fieldset{ 
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+
+
+
+
 /* Other styles */
 .dark-mode-toggle {
   position: absolute;
