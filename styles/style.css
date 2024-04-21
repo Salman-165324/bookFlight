@@ -439,6 +439,7 @@ fieldset {
 #travelers-dropdown p{
 
   color: var(--foreground-light);
+  font-size: small;
 }
 
 
