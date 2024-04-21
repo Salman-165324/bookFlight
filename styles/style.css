@@ -99,6 +99,7 @@ textarea:not([rows]) {
 :root {
   --clr-light: #fdfdfa;
   --clr-dark: #010e0b;
+  --clr-dark-lighter: #4a4d4c;
 
   --clr-neutral-1: #b3bbb0;
   --clr-neutral-2: #e4f0a3;
@@ -106,6 +107,7 @@ textarea:not([rows]) {
   --clr-primary-dark: #8f341b;
 
   --foreground: var(--clr-dark);
+  --foreground-light: var(--clr-dark-lighter);
   --background: var(--clr-light);
 
   --ff-heading: "Platypi", sans-serif;
@@ -116,12 +118,14 @@ textarea:not([rows]) {
 
 [data-theme="dark"] {
   --clr-light: #d2d3ca;
+  --clr-light-darker: #878884;
   --clr-dark: #010f0c;
   --clr-neutral-1: #1e2002;
   --clr-neutral-2: #00100d;
   --clr-primary: #ff7750;
 
   --foreground: var(--clr-light);
+  --foreground-light: var(--clr-light-darker);
   --background: var(--clr-dark);
 }
 
@@ -423,9 +427,19 @@ fieldset {
 
   display: flex;
   flex-direction: column;
-  gap: 1.2em;
+  gap: 1.6em;
 }
 
+#travelers-dropdown label{
+
+  margin-bottom: .5em;
+}
+
+
+#travelers-dropdown p{
+
+  color: var(--foreground-light);
+}
 
 
 
