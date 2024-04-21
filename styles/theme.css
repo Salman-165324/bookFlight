@@ -1,0 +1,79 @@
+/* contains color, fonts and container classes */
+
+
+/* basic styles */
+
+:root {
+    --clr-light: #fdfdfa;
+    --clr-dark: #010e0b;
+    --clr-dark-lighter: #4a4d4c;
+  
+    --clr-neutral-1: #b3bbb0;
+    --clr-neutral-2: #e4f0a3;
+    --clr-primary: #e75b34;
+    --clr-primary-dark: #8f341b;
+  
+    --foreground: var(--clr-dark);
+    --foreground-light: var(--clr-dark-lighter);
+    --background: var(--clr-light);
+  
+    --ff-heading: "Platypi", sans-serif;
+    --ff-body: "Roboto", sans-serif;
+  
+    font-size: 0.8em;
+  }
+  
+  [data-theme="dark"] {
+    --clr-light: #d2d3ca;
+    --clr-light-darker: #878884;
+    --clr-dark: #010f0c;
+    --clr-neutral-1: #1e2002;
+    --clr-neutral-2: #00100d;
+    --clr-primary: #ff7750;
+  
+    --foreground: var(--clr-light);
+    --foreground-light: var(--clr-light-darker);
+    --background: var(--clr-dark);
+  }
+  
+  @media (min-width: 50em) {
+    :root {
+      font-size: 1em;
+    }
+  }
+  
+  
+  body {
+    background: linear-gradient(
+      120deg,
+      var(--clr-neutral-1),
+      var(--clr-neutral-2)
+    );
+    color: var(--foreground);
+    font-family: var(--ff-body);
+    font-weight: 500;
+  
+    /* primary container */
+    margin-top: 8em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+  
+  @media (min-width: 40em) {
+    body {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+  
+  @media (min-width: 90em) {
+    body {
+      padding-left: 4em;
+      padding-right: 4em;
+      max-width: 90em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* basic styles ends */

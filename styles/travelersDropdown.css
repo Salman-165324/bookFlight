@@ -1,0 +1,137 @@
+@import url("theme.css");
+
+
+#travelers-dropdown {
+  display: none;
+  background-color: var(--background);
+  width: 90vw;
+  max-width: 28em;
+  padding: 0.8em 1em;
+  position: absolute;
+  top: 50%; /* Position the top edge of the element at the center of the screen vertically */
+  left: 50%; /* Position the left edge of the element at the center of the screen horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Shift the element back by half its width and height to truly center it */
+
+  z-index: 10;
+}
+
+@media (min-width: 78em) {
+  #travelers-dropdown {
+    top: 5em; /* Position the top edge of the element at the center of the screen vertically */
+    left: -6.8em; /* Position the left edge of the element at the center of the screen horizontally */
+    transform: translate(0%, 0%);
+  }
+}
+
+#travelers-and-more:focus + #travelers-dropdown,
+#travelers-and-more:active + #travelers-dropdown,
+#travelers-dropdown:focus,
+#travelers-dropdown:active,
+#travelers-dropdown:focus-within {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+#travelers-dropdown fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+}
+
+#travelers-dropdown label {
+  margin-bottom: 0.5em;
+}
+
+#travelers-dropdown p {
+  color: var(--foreground-light);
+  font-size: small;
+}
+
+#travelers-dropdown button {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 0.5em;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#travelers-dropdown button:hover,
+#travelers-dropdown button:focus {
+  background-color: var(--clr-primary-dark);
+  color: var(--background);
+  outline: none;
+}
+
+#travelers-dropdown button:active {
+  transform: scale(0.95);
+}
+
+[data-theme="dark"] #travelers-dropdown button {
+  background-color: var(--clr-neutral-1);
+  color: var(--clr-light);
+}
+[data-theme="dark"] #travelers-dropdown button:hover,
+#travelers-dropdown button:focus {
+  background-color: var(--clr-primary);
+  color: var(--clr-dark);
+  outline: none;
+}
+
+#travelers-dropdown select {
+  width: 100%;
+  height: 3em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border-radius: 0.5em;
+}
+
+/* Hide the default increment and decrement buttons */
+#travelers-dropdown input[type="number"]::-webkit-inner-spin-button,
+#travelers-dropdown input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#travelers-dropdown input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+}
+
+.number-input {
+  display: flex;
+  align-items: center;
+}
+
+.number-input input {
+  width: fit-content;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+  text-align: center;
+}
+
+

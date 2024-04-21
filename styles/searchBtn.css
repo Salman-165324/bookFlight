@@ -1,0 +1,48 @@
+@import url("theme.css");
+
+/* search btn related styles */
+
+#search-btn {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border: none;
+    height: 4.5em;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  @media (min-width: 78em) {
+    #search-btn {
+      width: fit-content;
+    }
+  }
+  
+  [data-theme="dark"] #search-btn {
+    background-color: var(--clr-neutral-1);
+    color: var(--clr-light);
+  }
+  
+  #search-btn:hover,
+  .search-btn:focus {
+    background-color: var(--clr-primary-dark);
+    color: var(--background);
+    outline: none;
+  }
+  
+  #search-btn:active {
+    transform: scale(0.95);
+  }
+  
+  [data-theme="dark"] #search-btn:hover,
+  .search-btn:focus {
+    background-color: var(--clr-primary);
+    color: var(--clr-dark);
+    outline: none;
+  }
+  
+  /* search btn related styles ends*/

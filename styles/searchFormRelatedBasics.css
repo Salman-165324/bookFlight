@@ -1,0 +1,209 @@
+@import url("theme.css");
+
+
+form {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+@media (min-width: 78em) {
+  form {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.6em;
+  }
+}
+
+
+/* search field div wrapper related styles */
+
+.search-field-div-wrapper {
+  display: grid;
+  gap: 0.2em;
+  grid-template:
+    "departure   departure   departure   departure    departure   departure   departure   departure"
+    "destination destination destination destination destination  destination destination destination"
+    "departureDate departureDate  returnDate returnDate travelersAndMore travelersAndMore travelersAndMore travelersAndMore";
+}
+
+@media (min-width: 78em) {
+  .search-field-div-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.25em;
+    row-gap: 0.5em;
+  }
+}
+
+/* search field div wrapper related styles ends*/
+
+/* search field div related styles */
+.search-field-div {
+  display: flex;
+  gap: 0.4em;
+  flex-direction: column;
+  padding-top: 1em;
+  align-items: flex-start;
+  height: 6em;
+  padding-left: 1em;
+  padding-right: 0.2em;
+  background-color: var(--background);
+}
+
+.search-field-div:first-child {
+  border-top-left-radius: 0.75em;
+  border-top-right-radius: 0.75em;
+}
+
+.search-field-div:last-of-type {
+  border-bottom-right-radius: 0.75em;
+}
+
+.search-field-div:focus-within {
+  outline: 3px solid var(--clr-primary);
+}
+
+.search-field-div label {
+  display: block;
+}
+
+.search-field-div input {
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  height: fit-content;
+  display: block;
+}
+
+.search-field-div input:focus {
+  outline: none;
+}
+
+@media (min-width: 78em) {
+  .search-field-div {
+    padding-top: 0em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    gap: 0.4em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 8em;
+    height: 4.5em;
+    background-color: var(--background);
+    position: relative;
+  }
+
+  .search-field-div input {
+    border: none;
+    background-color: inherit;
+    width: 100%;
+    height: fit-content;
+    display: block;
+  }
+
+  .search-field-div:first-child {
+    border-top-left-radius: 0.75em;
+    border-bottom-left-radius: 0.75em;
+
+    border-top-right-radius: 0em;
+  }
+
+  .search-field-div:last-of-type {
+    border-bottom-right-radius: 0.75em;
+    border-top-right-radius: 0.75em;
+  }
+}
+
+#departure-div {
+  grid-area: departure;
+  position: relative;
+}
+
+#destination-div {
+  grid-area: destination;
+}
+
+#departure-date-div {
+  grid-area: departureDate;
+}
+
+#return-date-div {
+  grid-area: returnDate;
+}
+
+#travelers-and-more-div {
+  grid-area: travelersAndMore;
+}
+
+@media (min-width: 78em) {
+  #departure-div,
+  #destination-div,
+  #travelers-and-more-div {
+    width: 15em;
+  }
+
+  #destination-div {
+    padding-left: 1.5em;
+  }
+}
+
+#swapButton {
+  /* Styles to make the button look like the provided image */
+  background-color: var(--background);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: -2.2em;
+  right: 0.5em;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  border: 0.2em solid var(--clr-primary);
+  border-radius: 50%;
+  width: 2.2em; /* Set the width of the button */
+  height: 2.2em; /* Set the height of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  display: flex; /* Use flexbox for centering the icon */
+  justify-content: center; /* Center the icon horizontally */
+  align-items: center; /* Center the icon vertically */
+  transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+#swapButton:hover {
+  background-color: var(--clr-primary); /* Color of the button on hover */
+}
+
+#swapButton:focus {
+  outline: none; /* Removes the outline to avoid default browser styles */
+}
+
+@media (min-width: 78em) {
+  #swapButton {
+    top: 50%;
+    right: -15%;
+  }
+}
+
+@media (max-width: 50em) {
+  #swapButton i.fa-rotate {
+    transform: translate(0%, 13%);
+  }
+}
+
+#swapButton i.fa-rotate {
+  /* color: #000000; Set the color of the icon */
+  font-size: 1em; /* Set the size of the icon */
+  transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+#swapButton:hover i.fa-rotate {
+  transform: rotate(180deg); /* Rotates the icon 180 degrees on hover */
+}
+/* search field div related styles ends */
+
+/* travelers and other information related classes */
