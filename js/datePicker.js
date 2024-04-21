@@ -7,6 +7,8 @@ const picker = new easepick.create({
   css: [
     'https://cdn.jsdelivr.net/npm/@easepick/core@1.2.1/dist/index.css',
     'https://cdn.jsdelivr.net/npm/@easepick/range-plugin@1.2.1/dist/index.css',
+    '../styles/style.css'
+   
   ],
   calendars:2,
   grid: 2,
