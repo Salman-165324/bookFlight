@@ -140,7 +140,12 @@
         <!-- travelers, cabin and other information selection -->
         <div class="search-field-div" id="travelers-and-more-div">
           <label for="travelers-and-more">Travelers and cabin class</label>
-          <input type="text" id="travelers-and-more" placeholder="Click to select" readonly />
+          <input
+            type="text"
+            id="travelers-and-more"
+            placeholder="Click to select"
+            readonly
+          />
           <div
             id="travelers-dropdown"
             aria-labelledby="total number of travelers, cabin class selectoin menu"
@@ -158,31 +163,38 @@
               </div>
 
               <div>
-                <label for="adult-traveler-count">Adults(Aged 16+)</label>
-                <input
-                  type="number"
-                  id="adult-traveler-count"
-                  name="adultTravelerCount"
-                  value="1"
-                  min="1"
-                  max="8"
-                  required
-                />
+                <label for="adult-traveler-count">Adults (Aged 16+)</label>
+                <div class="number-input">
+                  <button onclick="decrement('adult-traveler-count', 1)">-</button>
+                  <input
+                    type="number"
+                    id="adult-traveler-count"
+                    name="adultTravelerCount"
+                    value="1"
+                    min="1"
+                    max="8"
+                    required
+                  />
+                  <button onclick="increment('adult-traveler-count', 8)">+</button>
+                </div>
               </div>
-
+              
               <div>
-                <label for="child-traveler-count"
-                  >Children (Aged 0 to 15)</label
-                >
-                <input
-                  type="number"
-                  id="child-traveler-count"
-                  name="children"
-                  value="0"
-                  min="0"
-                  max="9"
-                />
+                <label for="child-traveler-count">Children (Aged 0 to 15)</label>
+                <div class="number-input">
+                  <button onclick="decrement('child-traveler-count', 0)">-</button>
+                  <input
+                    type="number"
+                    id="child-traveler-count"
+                    name="children"
+                    value="0"
+                    min="0"
+                    max="9"
+                  />
+                  <button onclick="increment('child-traveler-count', 9)">+</button>
+                </div>
               </div>
+              
               <div>
                 <p>
                   Your age at time of travel must be valid for the age category
@@ -207,5 +219,6 @@
     <script type="module" src="/js/datePicker.js"></script>
     <script src="/js/theme-toggle.js"></script>
     <script src="/js/travelersDropdown.js"></script>
+    <script src="/js/travelerCounter.js"></script>
   </body>
 </html>

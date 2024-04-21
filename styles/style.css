@@ -493,6 +493,31 @@ fieldset {
 }
 
 
+/* Hide the default increment and decrement buttons */
+#travelers-dropdown input[type='number']::-webkit-inner-spin-button,
+#travelers-dropdown input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#travelers-dropdown  input[type='number'] {
+  -moz-appearance: textfield; /* For Firefox */
+}
+
+.number-input {
+  display: flex;
+  align-items: center;
+
+}
+
+.number-input input{
+  width: fit-content;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  padding-right: .2em;
+  padding-left: .2em;
+  text-align: center;
+}
 /* Other styles */
 .dark-mode-toggle {
   position: absolute;
