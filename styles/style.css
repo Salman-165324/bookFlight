@@ -347,7 +347,6 @@ form {
 
 #destination-div {
   grid-area: destination;
-  padding-left: 1.5em;
 }
 
 #departure-date-div {
