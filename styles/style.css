@@ -371,22 +371,41 @@ form {
 #travelers-dropdown {
   display: none;
   background-color: var(--background);
-  width: 85vw;
-  max-width: 24.5em;
+  width: 90vw;
+  max-width: 28em;
   padding: 0.8em 1em;
   position: absolute;
+  top: 50%; /* Position the top edge of the element at the center of the screen vertically */
+  left: 50%; /* Position the left edge of the element at the center of the screen horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Shift the element back by half its width and height to truly center it */
+
   z-index: 10;
-  top: 4.8em;
+}
+
+@media (min-width: 78em) {
+  #travelers-dropdown {
+
+    top: 5em; /* Position the top edge of the element at the center of the screen vertically */
+    left: -6.8em; /* Position the left edge of the element at the center of the screen horizontally */
+    transform: translate(
+      0%,
+      0%
+    );
+  }
 }
 
 #travelers-and-more:focus + #travelers-dropdown,
 #travelers-and-more:active + #travelers-dropdown,
 #travelers-dropdown:focus,
-#travelers-dropdown:active, #travelers-dropdown:focus-within {
+#travelers-dropdown:active,
+#travelers-dropdown:focus-within {
   display: block;
 }
 
-.visually-hidden{
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -396,8 +415,7 @@ form {
   border: 0;
 }
 
-fieldset{
-
+fieldset {
   border: none;
 }
 
