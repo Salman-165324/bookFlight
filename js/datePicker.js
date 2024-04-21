@@ -5,7 +5,6 @@ import { RangePlugin } from '@easepick/range-plugin';
 const departureDateElement = document.getElementById('departure-date');
 const returnDateElement = document.getElementById('return-date');
 
-// Function to initialize the picker with arrow function syntax
 const initializePicker = (gridCount) => {
   return new easepick.create({
     element: departureDateElement,
@@ -33,11 +32,11 @@ const updatePickerSettings = () => {
   const breakpoint = 78 * remSize; // Converts 78rem to pixels
 
   if (width <= breakpoint) {
-    // Reinitialize the picker with 1 calendar and 1 grid
+    // Reinitialize the picker with 1 grid
     datepicker.destroy(); // Destroy the existing picker instance
     datepicker = initializePicker(1);
   } else {
-    // Maintain the picker with 2 calendars and 2 grids
+    // Maintain the picker with 1 grid
     datepicker.destroy(); // Destroy the existing picker instance
     datepicker = initializePicker(2);
   }
