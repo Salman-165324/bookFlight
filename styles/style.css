@@ -592,20 +592,3 @@ fieldset {
 }
 
 /* Other styles ends*/
-
-/* calender styles */
-:host {
-  --color-bg-default: var(--background);
-  --color-fg-primary: var(--clr-primary);
-  --color-fg-default: var(--foreground);
-  --color-fg-accent: var(--clr-primary-dark);
-  --color-bg-inrange: var(--clr-neutral-1);
-  --day-width: 40px;
-  --day-height: 32px;
-}
-
-@media (min-width: 78rem) {
-  .container {
-    margin-top: 1.9em; /* Adds 10px to the top margin, effectively lowering the position */
-  }
-}
