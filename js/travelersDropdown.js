@@ -50,8 +50,8 @@ const showDropdown = () => {
     });
   
     // Add change event listeners to inputs
-    document.getElementById('adults').addEventListener('change', updateDisplayValue);
-    document.getElementById('children').addEventListener('change', updateDisplayValue);
+    document.getElementById('adults')?.addEventListener('change', updateDisplayValue);
+    document.getElementById('children')?.addEventListener('change', updateDisplayValue);
   
     // Call the update display function to set the initial value
     updateDisplayValue();
