@@ -7,3 +7,8 @@ const swapValues = () => {
 };
   
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const swapButton = document.getElementById('swapButton'); 
+    swapButton.addEventListener('click', swapValues); 
+})

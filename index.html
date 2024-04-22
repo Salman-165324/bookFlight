@@ -33,6 +33,19 @@
     <link rel="stylesheet" href="/styles/cssResets.css" />
 
     <!-- css style sheets ends-->
+
+    <!-- js files -->
+
+    <script type="module" defer  src="js/datePicker.js"></script>
+    <script type="module" defer src="js/customCabinClassSelection.js"></script>
+    <script type="module" defer src="js/travelerCounter.js"></script>
+    <script type="module" defer src="js/travelersDropdown.js"></script>
+    <script type="module" defer src="js/comboboxDeparture.js"></script>
+    <script type="module" defer src="js/comboboxDestination.js"></script>
+    <script type="module" defer src="js/unwantedFormSubmission.js"></script>
+
+    <script type="module" async src="js/swapPlaces.js"></script>
+    <script type="module" async src="js/theme-toggle.js"></script>
   </head>
   <body>
     <main>
@@ -138,7 +151,7 @@
               ></div>
             </div>
             <!-- Swap Button -->
-            <button id="swapButton" onclick="swapValues()">
+            <button id="swapButton">
               <i class="fa-solid fa-rotate"></i>
             </button>
           </div>
@@ -205,7 +218,7 @@
                 <!-- cabin class selection -->
                 <div>
                   <label for="cabin-class">Cabin Class</label>
-                  <div class="custom-select" onclick="toggleDropdown()">
+                  <div class="custom-select">
                     <span id="selected-value">Economy</span>
                     <div id="custom-options" class="options-container">
                       <div class="option" data-value="Economy">Economy</div>
@@ -220,9 +233,7 @@
                 <div>
                   <label for="adult-traveler-count">Adults (Aged 16+)</label>
                   <div class="number-input">
-                    <button onclick="decrement('adult-traveler-count', 1)">
-                      -
-                    </button>
+                    <button id="adult-decrement-btn">-</button>
                     <input
                       type="number"
                       id="adult-traveler-count"
@@ -232,9 +243,7 @@
                       max="8"
                       required
                     />
-                    <button onclick="increment('adult-traveler-count', 8)">
-                      +
-                    </button>
+                    <button id="adult-increment-btn">+</button>
                   </div>
                 </div>
 
@@ -243,9 +252,7 @@
                     >Children (Aged 0 to 15)</label
                   >
                   <div class="number-input">
-                    <button onclick="decrement('child-traveler-count', 0)">
-                      -
-                    </button>
+                    <button id="decrement-children-btn">-</button>
                     <input
                       type="number"
                       id="child-traveler-count"
@@ -254,9 +261,7 @@
                       min="0"
                       max="9"
                     />
-                    <button onclick="increment('child-traveler-count', 9)">
-                      +
-                    </button>
+                    <button id="increment-children-btn">+</button>
                   </div>
                 </div>
 
@@ -272,7 +277,7 @@
                   </p>
                 </div>
 
-                <button type="button" onclick="applySelection()">Apply</button>
+                <button id="travelers-apply-btn" type="button">Apply</button>
               </fieldset>
             </div>
           </div>
@@ -281,16 +286,5 @@
         <button id="search-btn">Search</button>
       </form>
     </main>
-    
-    <script defer type="module" src="js/datePicker.js"></script>
-    <script defer src="js/customCabinClassSelection.js"></script>
-    <script defer src="js/travelerCounter.js"></script>
-    <script defer src="js/travelersDropdown.js"></script>
-    <script defer src="js/comboboxDeparture.js"></script>
-    <script defer src="js/comboboxDestination.js"></script>
-    <script defer src="js/unwantedFormSubmission.js"></script>
-
-    <script async src="/js/swapPlaces.js"></script>
-    <script async src="/js/theme-toggle.js"></script>
   </body>
 </html>
