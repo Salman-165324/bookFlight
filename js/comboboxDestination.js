@@ -330,7 +330,7 @@ var aria = aria || {};
 
 var citiesAndCountry;
 window.addEventListener('load', function() {
-  fetch('../data/cities.json')
+  fetch('/cities.json')
       .then(response => response.json())
       .then(data => {
           citiesAndCountry = data.map(item => [item.city, item.country]);
