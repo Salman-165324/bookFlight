@@ -11,7 +11,8 @@ const initializePicker = (gridCount) => {
     css: [
       'https://cdn.jsdelivr.net/npm/@easepick/core@1.2.1/dist/index.css',
       'https://cdn.jsdelivr.net/npm/@easepick/range-plugin@1.2.1/dist/index.css',
-      '../styles/customizeCalender.css'
+       '/customizeCalender.css',
+      '/styles/customizeCalender.css'
     ],
     calendars: 2,
     grid: gridCount,

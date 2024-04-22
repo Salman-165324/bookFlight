@@ -338,7 +338,6 @@ window.addEventListener('load', function() {
       .catch(error => console.error('Error loading city data:', error));
 });
 
-console.log("cities data",citiesAndCountry); 
 
 function searchData(searchString) {
   var results = [];
