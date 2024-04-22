@@ -16,6 +16,7 @@ const initializePicker = (gridCount) => {
     ],
     calendars: 2,
     grid: gridCount,
+    format: "DD MMM YYYY",
     plugins: [RangePlugin],
     RangePlugin: {
       elementEnd: returnDateElement,
