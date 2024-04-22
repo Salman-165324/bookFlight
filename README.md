@@ -8,7 +8,8 @@
 - **Themes for Night Owls:** Dark and night themes have been added to reduce screen brightness in low-light conditions.
 - **Well-Organized CSS:** CSS rules are sorted into separate files based on their purpose, making the code cleaner and easier to manage.
 - **Pushing for Accessibility:** Efforts have been made to enhance accessibility within the limited available development time.
-
+- **Semantic HTML:** Tried to use semantic HTML for accessibility, SEO and overall code readability by providing meaningful structure and context to web content
+- **Well-Organized JS:** JS codes are sorted into separate files based on their purpose, making the code cleaner and easier to manage.
 
 ## Local Development Setup
 
