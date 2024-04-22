@@ -1,6 +1,6 @@
 @import url("theme.css");
 
-/* Other styles */
+
 .dark-mode-toggle {
     position: absolute;
     z-index: 100;
@@ -30,5 +30,5 @@
     color: var(--clr-primary);
   }
   
-  /* Other styles ends*/
+
   
