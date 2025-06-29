@@ -1,7 +1,15 @@
 ## What's I have done?
 
-- **Live Site** https://book-flight-neon.vercel.app/
+- **Live Site** https://book-flight-neon.vercel.app/      
 
+## Disclaimer
+
+This is a small application I built to practice and improve my **vanilla JavaScript** and **raw CSS** skills.  
+As such, I haven’t implemented full search functionality or connected any external APIs — yet. I might explore those features in the future.
+
+> **Note:** To test the **From** and **To** fields, try typing the letter **"b"**.
+
+### Features:
 - **Responsive Search Widget:** The search widget has been fine-tuned for smooth performance across all devices and up to 300% zoom.
 - **Scalable Styling:** Most styling uses relative units to ensure everything scales up or down seamlessly.
 - **Intuitive Date Fields:** On mobile, the departure and return date fields are separated to simplify date selection.
